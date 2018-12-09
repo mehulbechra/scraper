@@ -2,7 +2,6 @@
 
 // Dependencies
 const cluster = require('cluster');
-const cCPUs = require('os').cpus().length;
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
@@ -12,7 +11,8 @@ const list = require('./routes/list');
 
 if (cluster.isMaster) {
   // Create a worker for each CPU
-  for (let i = 0; i < cCPUs; i++) {
+  const WORKERS = process.env.WEB_CONCURRENCY || 1;
+  for (let i = 0; i < WORKERS; i++) {
     cluster.fork();
   }
 

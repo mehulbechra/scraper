@@ -9,7 +9,7 @@ const search = require('./routes/search');
 const list = require('./routes/list');
 
 // Connecting to databse
-mongoose.connect('mongodb://localhost/Scraper', { useNewUrlParser: true })
+mongoose.connect('mongodb://scraperuser:scraperuser12@ds217671.mlab.com:17671/scraper', { useNewUrlParser: true })
   .then(() => console.log('Database connected'))
   .catch(err => console.log('Could not connect to MongoDb'));
 

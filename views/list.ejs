@@ -1,0 +1,7 @@
+<% include partials/header %>
+  <ul>
+    <% values.forEach(function(value) { %>
+      <li><a href="/list/<%= value.value %>"><%= value.value %></a></li>
+    <% }) %>
+  </ul>
+<% include partials/footer %>

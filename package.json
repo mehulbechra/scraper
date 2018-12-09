@@ -10,10 +10,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "*",
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
     "images-scraper": "*",
     "jimp": "^0.6.0",
+    "joi": "^14.3.0",
     "mongoose": "^5.3.15",
-    "request-promise": "*"
+    "request-promise": "*",
+    "rimraf": "^2.6.2"
   }
 }

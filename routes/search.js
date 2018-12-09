@@ -27,7 +27,6 @@ router.post('/:search', async (req, res) => {
       }
     }
   } catch (ex) {
-    console.log(ex);
     res.status(500).send('Server Error');
   }
 });

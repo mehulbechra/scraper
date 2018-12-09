@@ -1,6 +1,5 @@
 // Dependencies
 const express = require('express');
-const helpers = require('./../lib/helpers');
 
 // Initialization
 const router = express();

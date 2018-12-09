@@ -1,3 +1,4 @@
+// Create a post request
 function postSearchValue(e) {
   e.preventDefault();
   $.ajax({
@@ -10,6 +11,7 @@ function postSearchValue(e) {
   });
 }
 
+// On document ready
 $(document).ready(() => {
   $('#submit-button').on('click', postSearchValue);
 });

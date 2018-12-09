@@ -1,7 +1,7 @@
 // Dependencies
 const mongoose = require('mongoose');
 
-// Creating Model for Customers
+// Creating Model for Search list
 const List = mongoose.model('List', new mongoose.Schema({
   value: {
     type: String,

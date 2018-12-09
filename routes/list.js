@@ -6,6 +6,7 @@ const helpers = require('./../lib/helpers');
 // Initialization
 const router = express();
 
+// Show list of searches
 router.get('/', async (req, res) => {
   try {
     const values = await _data.getAllValues();
@@ -16,9 +17,11 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Shows images of a single search
 router.get('/:search', async (req, res) => {
   try {
     const { search } = req.params;
+    // Get all file names for the given search
     const fileNames = await helpers.list(`${search}/`);
     res.render('images', { fileNames, search });
     res.status(200).send();
@@ -28,4 +31,5 @@ router.get('/:search', async (req, res) => {
   }
 });
 
+// Export the module
 module.exports = router;
